@@ -1,0 +1,72 @@
+/*Estilos moviles */
+@media (max-width: 768px) {}
+/*Estilos desktop */
+@media (min-width: 768px)  {
+    .fondo {
+        background-color: #9da3ff;
+    }
+    .contenedor {
+        width: 80%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cabecera {
+        background-color: #312e66;
+        width: 35%;
+        height: 100px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .titulo1 {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 50px;
+        text-align: center;
+        color: white;
+
+    }
+    .esp1 {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        height: 250px;
+        background-color: white;
+        padding: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .esp2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+
+    }
+    .label1 {
+        color: #312e66;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .input1 {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #312e66;
+    }
+    .btnLogin {
+        width: 50%;
+        padding: 10px;
+        background-color: #312e66;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+    }
+}
