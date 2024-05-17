@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Link, BrowserRouter} from 'react-router-dom';
 
 function Dashboard() {
     return (
         <div className="ds-contenedor">
             <h1>Dashboard</h1>
             <div>
-                <a>
+                <Link to='/crear-documento'>
                     Crear documento
-                </a>
+                </Link>
             </div>
             <div>
                 <table>
@@ -37,8 +38,8 @@ if (document.getElementById('dashboard')) {
     const Index = ReactDOM.createRoot(document.getElementById("dashboard"));
 
     Index.render(
-        <React.StrictMode>
+        <BrowserRouter>
             <Dashboard/>
-        </React.StrictMode>
+        </BrowserRouter>
     )
 }
