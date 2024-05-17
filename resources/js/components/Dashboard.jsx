@@ -6,9 +6,9 @@ function Dashboard() {
         <div className="ds-contenedor">
             <h1>Dashboard</h1>
             <div>
-                <button>
+                <a>
                     Crear documento
-                </button>
+                </a>
             </div>
             <div>
                 <table>

@@ -15,3 +15,4 @@ import './bootstrap';
 import './components/Example';
 import './components/auth/Login';
 import './components/Dashboard';
+import './components/documentos/CrearDocumento';
