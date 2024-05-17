@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cabLogin')
 
 @section('content')
 {{-- <div class="container">
