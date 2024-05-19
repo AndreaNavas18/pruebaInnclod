@@ -21,6 +21,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::get('/crear-documento', [HomeController::class, 'crearDocumento'])->name('crear-documento');
+
 Route::post('/guardar-documento', [HomeController::class, 'guardarDocumento'])->name('guardar-documento');
 
+Route::get('/procesos', [HomeController::class, 'obtenerProcesos']);
+
+Route::get('/tipos', [HomeController::class, 'obtenerTipos']);
+
+Route::get('/editar-documento/{id}', [HomeController::class, 'editarDocumento'])->name('editar-documento');
+
+Route::put('/editar-documento/{id}', [HomeController::class, 'actualizarDocumento'])->name('actualizar-documento');
+
+Route::get('/documento/{id}', [HomeController::class, 'obtenerDocumento']);

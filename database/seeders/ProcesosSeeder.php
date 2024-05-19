@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-use App\Models\Pro_proceso;
+use App\Models\Proceso;
 
 class ProcesosSeeder extends Seeder
 {
@@ -18,7 +18,7 @@ class ProcesosSeeder extends Seeder
         ];
 
         foreach($procesos as $proceso) {
-            Pro_proceso::create($proceso);
+            Proceso::create($proceso);
         }
 
     }

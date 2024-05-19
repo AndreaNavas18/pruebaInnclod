@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Tip_tipo_doc;
+use App\Models\TipoDocumento;
 
 class TiposSeeder extends Seeder
 {
@@ -23,7 +23,7 @@ class TiposSeeder extends Seeder
         ];
 
         foreach($tipos as $tipo) {
-            Tip_tipo_doc::create($tipo);
+            TipoDocumento::create($tipo);
         }
     }
 }

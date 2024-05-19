@@ -69,4 +69,195 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
     }
+
+    .ds-contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .ds-tabla table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .ds-tabla th {
+        background-color: #312e66;
+        color: white;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .ds-tabla td {
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .ds-tabla tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .ds-tabla tr:hover {
+        background-color: #ddd;
+    }
+
+
+    .ds-divP {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .ds-crear {
+        background-color: #46b42b;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        border-radius: 12px;
+    }
+
+    .ds-crear:hover {
+        background-color: #42d51e;
+        color: white;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        border-radius: 12px;
+    }
+
+    .cd-contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .cd-contenedor h1 {
+        font-size: 35px;
+        font-weight: 800;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #312e66;
+        text-align: center;
+    }
+
+    .cd-contenedor form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cd-divP {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 50px;
+    }
+
+    .cd-divP label {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #312e66;
+        font-weight: 700;
+    }
+
+    .cd-divP input {
+        padding: 10px;
+        border: 1px solid #312e66;
+        border-radius: 10px;
+        width: 40%;
+    }
+
+    .cd-divP textarea {
+        padding: 10px;
+        border: 1px solid #312e66;
+        border-radius: 10px;
+        height: 150px;
+        width: 40%;
+    }
+
+    .cd-divP button {
+        padding: 15px;
+        background-color: #312e66;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        margin-top: 20px;
+        
+    }
+
+    .cd-divP button:hover {
+        padding: 15px;
+        background-color: #3d9427;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .cd-divP select {
+        padding: 10px;
+        border: 1px solid #312e66;
+        border-radius: 10px;
+        background-color: white;
+        width: 40%;
+
+    }
+
+    .btnLateral {
+        padding: 10px;
+        background-color: #312e66;
+        font-size: 14px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+    .alert {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+
 }
