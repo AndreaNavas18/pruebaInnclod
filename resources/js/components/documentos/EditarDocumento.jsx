@@ -93,28 +93,27 @@ function EditarDocumento() {
                     <textarea id="doc_contenido" name="doc_contenido" value={documento.doc_contenido} onChange={handleChange}></textarea>
                 </div>
                 <div className="cd-divP">
-                <label>Proceso</label>
-                <select name='doc_id_proceso' value={documento.doc_id_proceso} onChange={handleChange} style={marginS}>
-                    <option value="">Seleccione un proceso</option>
-                    {procesos.map(proceso => (
-                        <option key={proceso.pro_id} value={proceso.pro_id}>{proceso.pro_nombre}</option>
-                    ))}
-                </select>
+                    <label>Proceso</label>
+                    <select name='doc_id_proceso' value={documento.doc_id_proceso} onChange={handleChange} style={marginS}>
+                        <option value="">Seleccione un proceso</option>
+                        {procesos.map(proceso => (
+                            <option key={proceso.pro_id} value={proceso.pro_id}>{proceso.pro_nombre}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className="cd-divP">
-                <label>Tipo</label>
-                <select name='doc_id_tipo' value={documento.doc_id_tipo} onChange={handleChange} style={marginT}>
-                    <option value="">Seleccione un tipo</option>
-                    {tipos.map(tipo => (
-                        <option key={tipo.tip_id} value={tipo.tip_id}>{tipo.tip_nombre}</option>
-                    ))}
-                </select>
+                    <label>Tipo</label>
+                    <select name='doc_id_tipo' value={documento.doc_id_tipo} onChange={handleChange} style={marginT}>
+                        <option value="">Seleccione un tipo</option>
+                        {tipos.map(tipo => (
+                            <option key={tipo.tip_id} value={tipo.tip_id}>{tipo.tip_nombre}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className="cd-divP">
                     <button type="submit">Guardar</button>
                 </div>
             </form>
-            
         </div>
     );
 }

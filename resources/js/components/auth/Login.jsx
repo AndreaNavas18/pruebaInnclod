@@ -27,6 +27,10 @@ function Login() {
     const margen = {
         marginTop: '12px'
     };
+
+    const detalle = {
+        marginLeft: '28px'
+    }
     return (
         <div className='fondo'>
             <div className='contenedor'>
@@ -42,11 +46,11 @@ function Login() {
                     </div>
                 )}
                     <div className='esp2'>
-                        <label className='label1'>Username</label>
-                        <input type='text' name='username' id='username' className='input1' value={username} onChange={(event) => setUsername(event.target.value)}/>
+                        <label className='label1'>Usuario</label>
+                        <input type='text' name='username' id='username' style={detalle} className='input1' value={username} onChange={(event) => setUsername(event.target.value)}/>
                     </div>
                     <div className='esp2'>
-                        <label className='label1'>Password</label>
+                        <label className='label1'>Contraseña</label>
                         <input type='password' name='password' id='password' className='input1' value={password} onChange={(event) => setPassword(event.target.value)}/>
                     </div>
                     <button type='submit' className='btnLogin' style={margen}>Ingresar</button>
@@ -57,13 +61,3 @@ function Login() {
 }
 
 export default Login;
-
-if (document.getElementById('login')) {
-    const Index = ReactDOM.createRoot(document.getElementById("login"));
-
-    Index.render(
-        <React.StrictMode>
-            <Login/>
-        </React.StrictMode>
-    )
-}

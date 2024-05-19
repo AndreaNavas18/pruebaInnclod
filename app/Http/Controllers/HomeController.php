@@ -11,21 +11,11 @@ use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         $documentos = Documento::all();
@@ -50,6 +40,11 @@ class HomeController extends Controller
         return response()->json($tipos);
     }
 
+    public function obtenerDocumentos(){
+        $documentos = Documento::all();
+        return response()->json($documentos);
+    }
+
     public function guardarDocumento(Request $request){
         DB::beginTransaction();
         try {
@@ -58,7 +53,7 @@ class HomeController extends Controller
             $documento->doc_contenido = $request->doc_contenido;
             $documento->doc_id_tipo = $request->doc_id_tipo;
             $documento->doc_id_proceso = $request->doc_id_proceso;
-
+            \Log::info($request->all());
             $documento->save();
             DB::commit();
             return response()->json(['success' => 'Documento guardado correctamente'], 200);
@@ -108,8 +103,13 @@ class HomeController extends Controller
             Log::error($e->getMessage());
             return response()->json(['success' => false, 'error' => 'Error al actualizar el documento'], 500);
         }
+    }
 
-
+    public function eliminarDocumento($id){
+        $documento = Documento::findOrFail($id);
+        $documento->delete();
+        Log::info('Documento eliminado correctamente');
+        return response()->json(null, 204);
     }
 
 }

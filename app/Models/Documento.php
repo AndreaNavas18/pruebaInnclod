@@ -25,19 +25,21 @@ class Documento extends Model
         'doc_id_proceso'
     ];
 
-    //Fucniones para crear el consecutivo que tendra cada documento cuando se guarde
+    //Fucnion para crear el consecutivo que tendra cada documento cuando se guarde
     protected static function boot() {
 
         parent::boot();
         static::creating(function ($documento){
             $ultConsecutivo = static::orderBy('doc_id', 'desc')->value('doc_codigo');
-            $ultNumero = (int) explode('-', $ultConsecutivo)[2];
-            $siguiente = $ultNumero + 1;
-
+            if(!$ultConsecutivo){
+                $siguiente = 1;
+            }else {
+                $ultNumero = (int) explode('-', $ultConsecutivo)[2];
+                $siguiente = $ultNumero + 1;
+            }
             $prefijoProceso = $documento->proceso->pro_prefijo;
             $prefijoTipo = $documento->tipo->tip_prefijo;
             $documento->doc_codigo = $prefijoTipo . '-'. $prefijoProceso . '-' . $siguiente;
-            
         });
     }
 

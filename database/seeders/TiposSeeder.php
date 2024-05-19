@@ -13,7 +13,7 @@ class TiposSeeder extends Seeder
      */
     public function run(): void
     {
-        //Creo los procesos por seeder 
+        //Creo los tipos por seeder 
         $tipos = [
             ['tip_nombre' => 'Manual', 'tip_prefijo' => 'MAN'],
             ['tip_nombre' => 'Reporte', 'tip_prefijo' => 'REP'],

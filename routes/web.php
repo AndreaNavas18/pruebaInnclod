@@ -15,12 +15,14 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::delete('/eliminar-documento/{id}', [HomeController::class, 'eliminarDocumento'])->name('eliminar-documento');
 
 Route::get('/crear-documento', [HomeController::class, 'crearDocumento'])->name('crear-documento');
 
@@ -29,6 +31,8 @@ Route::post('/guardar-documento', [HomeController::class, 'guardarDocumento'])->
 Route::get('/procesos', [HomeController::class, 'obtenerProcesos']);
 
 Route::get('/tipos', [HomeController::class, 'obtenerTipos']);
+
+Route::get('/documentos', [HomeController::class, 'obtenerDocumentos']);
 
 Route::get('/editar-documento/{id}', [HomeController::class, 'editarDocumento'])->name('editar-documento');
 
