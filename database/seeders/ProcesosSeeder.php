@@ -18,7 +18,7 @@ class ProcesosSeeder extends Seeder
         ];
 
         foreach($procesos as $proceso) {
-            Proceso::create($proceso);
+            Proceso::firstOrCreate($proceso);
         }
 
     }

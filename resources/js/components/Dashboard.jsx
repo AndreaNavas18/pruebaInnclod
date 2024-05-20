@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Dashboard() {
     const [documentos, setDocumentos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
 
     const handleBusqueda = (event) => {
+        console.log(event.target.value);
         setBusqueda(event.target.value);
     };
 
@@ -42,6 +44,8 @@ function Dashboard() {
             documento.doc_contenido.toLowerCase().includes(busqueda.toLowerCase())
         );
     });
+
+    console.log(documentosFiltrados);
 
     const tdAction = {
         display: 'flex',

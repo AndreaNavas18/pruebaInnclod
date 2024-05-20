@@ -171,7 +171,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         text-decoration: none;
         border-radius: 12px;
         border: 2px solid #3d74c6;
@@ -281,6 +281,17 @@
         text-decoration: none;
     }
 
+    .btnLateral:hover {
+        padding: 10px;
+        background-color: white;
+        font-size: 14px;
+        color: #3d74c6;
+        border: 1px solid #3d74c6;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
     .btnEliminar {
         padding: 10px;
         background-color: #ff0000;
@@ -291,6 +302,17 @@
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
         margin-left: 10px;
+    }
+
+    .btnEliminar:hover {
+        padding: 10px;
+        background-color: white;
+        font-size: 14px;
+        color: #ff0000;
+        border: 1px solid #ff0000;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
     }
 
     .h-container {
@@ -305,6 +327,17 @@
         font-size: 14px;
         color: white;
         border: none;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
+    .h-container button:hover {
+        padding: 10px;
+        background-color: white;
+        font-size: 14px;
+        color: #3d74c6;
+        border: 1px solid #3d74c6;
         border-radius: 10px;
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;

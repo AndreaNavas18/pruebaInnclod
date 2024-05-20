@@ -23,7 +23,7 @@ class TiposSeeder extends Seeder
         ];
 
         foreach($tipos as $tipo) {
-            TipoDocumento::create($tipo);
+            TipoDocumento::firstOrCreate($tipo);
         }
     }
 }
