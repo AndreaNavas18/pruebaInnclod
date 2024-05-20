@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 
 function Dashboard() {
     const [documentos, setDocumentos] = useState([]);
+    const [busqueda, setBusqueda] = useState('');
+
+    const handleBusqueda = (event) => {
+        setBusqueda(event.target.value);
+    };
 
     useEffect(() => {
         async function fetchD(){
@@ -15,6 +20,7 @@ function Dashboard() {
         }
         fetchD();
     }, []);
+
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     const eliminarDocumento = async (id) => {
         try {
@@ -29,6 +35,14 @@ function Dashboard() {
         }
     };
 
+    const documentosFiltrados = documentos.filter((documento) => {
+        return (
+            documento.doc_codigo.toLowerCase().includes(busqueda.toLowerCase()) ||
+            documento.doc_nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
+            documento.doc_contenido.toLowerCase().includes(busqueda.toLowerCase())
+        );
+    });
+
     const tdAction = {
         display: 'flex',
         justifyContent: 'space-around',
@@ -42,6 +56,8 @@ function Dashboard() {
                 <Link className='ds-crear' to="/crear-documento">
                 Crear documento
                 </Link>
+                <input type="text" className='ds-inputB' placeholder="Buscar documentos" value={busqueda} onChange={handleBusqueda}
+                />
             </div>
             <div className='ds-tabla'>
             {documentos.length === 0 ? ( 
@@ -57,7 +73,7 @@ function Dashboard() {
                         </tr>
                     </thead>
                     <tbody>
-                    {documentos.map(documento => (
+                    {documentosFiltrados.map(documento => (
                         <tr key={documento.doc_id}>
                             <td>{documento.doc_codigo}</td>
                             <td>{documento.doc_nombre}</td>

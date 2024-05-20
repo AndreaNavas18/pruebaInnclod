@@ -141,10 +141,12 @@
 
     .ds-divP {
         display: flex;
-        flex-direction: row;
+        width: 60%;
+        flex-direction: column;
         justify-content: center;
         padding: 10px;
         margin: 10px;
+        gap: 15px;
     }
 
     .ds-crear {
@@ -154,9 +156,12 @@
         font-weight: 700;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         text-decoration: none;
         border-radius: 12px;
+        width: 30%;
+        height: 50px;
+        margin: 0 auto;
     }
 
     .ds-crear:hover {
@@ -170,6 +175,13 @@
         text-decoration: none;
         border-radius: 12px;
         border: 2px solid #3d74c6;
+    }
+
+    .ds-inputB {
+        padding: 10px;
+        border: 1px solid #3d74c6;
+        width: 100%;
+        margin-left: 10px;
     }
 
     .cd-contenedor {
